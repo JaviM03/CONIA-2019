@@ -1,57 +1,49 @@
 package com.martinez.conia_app.Adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.RatingBar
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.martinez.conia_app.DataBase.Entities.Ponencias
-import com.martinez.conia_app.R
+import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.template_ponencias.view.*
 
-class AdapterCustomPonencias(items:ArrayList<Ponencias>): RecyclerView.Adapter<AdapterCustomPonencias.ViewHolder>()  {
 
-    var items:ArrayList<Ponencias>? = null
+abstract class PonenciaCustomAdapter internal constructor(context: Context) : RecyclerView.Adapter<PonenciaCustomAdapter.ViewHolder>() {
 
-    init {
-        this.items = items
-    }
+    private val inflater = LayoutInflater.from(context)
+    private var items = emptyList<Ponencia>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdapterCustomPonencias.ViewHolder {
-        val vista = LayoutInflater.from(parent.context).inflate(R.layout.template_ponencias, parent, false)
+    abstract fun setClickListenerToReport(holder: ViewHolder, item: Ponencia)
 
-        val viewHolder = ViewHolder(vista)
-        //Con esto renderizo la vista, pero no los elementos
-        return viewHolder
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = inflater.inflate(R.layout.template_ponencias, parent,false)
+
+        return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return items?.count()!!
+        return items.size
     }
 
-    override fun onBindViewHolder(holder: AdapterCustomPonencias.ViewHolder, position: Int) {
-
-        val item = items?.get(position)
-        //mappeo los valores que tengo en holder
-        holder.foto?.setImageResource(item?.imagen!!)
-        holder.nombre?.text = item?.nombre
-        holder.precio?.text = item?.descripcion
-        holder.rating?.rating = item?.rating?.toFloat()!!
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(items[position])
+        setClickListenerToReport(holder, items[position])
     }
 
-    class ViewHolder(vista: View):RecyclerView.ViewHolder(vista){
-        var vista = vista
-        var foto: ImageView? = null
-        var nombre: TextView? = null
-        var precio: TextView? = null
-        var rating: RatingBar? = null
+    internal fun changeDataSet(newDataSet : List<Ponencia>){
+        this.items = newDataSet
+        notifyDataSetChanged()
+    }
 
-        init {
-            foto = vista.findViewById(R.id.iv_ponente)
-            nombre = vista.findViewById(R.id.tv_nombreP)
-            precio = vista.findViewById(R.id.tv_descripcion)
-            rating = vista.findViewById(R.id.ratingBar)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        fun bind (item: Ponencia) = with(itemView){
+
+            //Acá le agrego los atributos que deseo consumir de la api
+            tv_nombreP.text = item.nombre
+            tv_descripcion.text = item.resumen //ahorita solo un resumen
+            //Con esto mando a consumir mi imagen de firebase
+            Glide.with(itemView).load(item.imagenURL).into(iv_ponente)
         }
     }
 
