@@ -8,7 +8,31 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="mainFragment">
+                  <entry key="formularioRegistro">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="111" />
+                            <option name="y" value="391" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="loginFragment2">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-15" />
+                            <option name="y" value="39" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="menu_home">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -24,23 +48,18 @@
                                 <LayoutPositions />
                               </value>
                             </entry>
-                            <entry key="toPresentaciones">
-                              <value>
-                                <LayoutPositions />
-                              </value>
-                            </entry>
                           </map>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="ponenciaFragment">
+                  <entry key="menu_ponencias">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="368" />
+                            <option name="x" value="502" />
+                            <option name="y" value="276" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -51,30 +70,6 @@
                               </value>
                             </entry>
                           </map>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="presentacionesFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="500" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="reservaFragment">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="797" />
-                            <option name="y" value="373" />
-                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

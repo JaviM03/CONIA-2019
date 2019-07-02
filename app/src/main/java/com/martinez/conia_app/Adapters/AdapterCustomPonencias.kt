@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.martinez.conia_app.Entidad.Ponencia
+import com.martinez.conia_app.R
 import kotlinx.android.synthetic.main.template_ponencias.view.*
 
 
