@@ -1,17 +1,22 @@
 package com.martinez.conia_app.Fragments
 
+import android.content.Context
+import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.database.*
 import com.martinez.conia_app.Adapters.PonenciaCustomAdapter
 import com.martinez.conia_app.Entidad.Ponencia
+
+import com.martinez.conia_app.R
 import kotlinx.android.synthetic.main.fragment_ponencia.view.*
+
 
 class PonenciaFragment : Fragment() {
 
@@ -77,5 +82,4 @@ class PonenciaFragment : Fragment() {
         rv.layoutManager = LinearLayoutManager(view.context)
 
     }
-
 }

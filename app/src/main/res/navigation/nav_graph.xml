@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_grapgh"
-    app:startDestination="@id/menu_home">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_grapgh"
+            app:startDestination="@id/loginFragment2">
 
     <fragment
-        android:id="@+id/menu_ponencias"
-        android:name="com.martinez.conia_app.Fragments.PonenciaFragment"
-        android:label="fragment_ponencia"
-        tools:layout="@layout/fragment_ponencia" />
-
+            android:id="@+id/menu_ponencias"
+            android:name="com.martinez.conia_app.Fragments.PonenciaFragment"
+            android:label="fragment_ponencia"
+            tools:layout="@layout/fragment_ponencia" />
     <fragment
-        android:id="@+id/menu_home"
-        android:name="com.martinez.conia_app.Fragments.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+            android:id="@+id/loginFragment2"
+            android:name="com.martinez.conia_app.Fragments.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/toPonencia"
-            app:destination="@id/menu_ponencias" />
-    </fragment>
-    <fragment android:id="@+id/loginFragment2" android:name="com.martinez.conia_app.Fragments.LoginFragment"
-              android:label="fragment_login" tools:layout="@layout/fragment_login">
-        <action android:id="@+id/toMainFragment" app:destination="@id/menu_home"/>
+                android:id="@+id/toMainFragment"
+                app:destination="@id/menu_home" />
         <action android:id="@+id/action_loginFragment2_to_formularioRegistro" app:destination="@id/formularioRegistro"/>
+    </fragment>
+    <fragment
+            android:id="@+id/menu_home"
+            android:name="com.martinez.conia_app.Fragments.MainFragment"
+            android:label="fragment_main"
+            tools:layout="@layout/fragment_main">
+        <action
+                android:id="@+id/toPonencia"
+                app:destination="@+id/menu_ponencias" />
+    </fragment>
+
+    <fragment android:id="@+id/infoCompletaPonencias"
+              android:name="com.martinez.conia_app.Fragments.InfoCompletaPonencias"
+              android:label="fragment_info_completa_ponencias2"
+              tools:layout="@layout/fragment_info_completa_ponencias2">
     </fragment>
     <fragment android:id="@+id/formularioRegistro" android:name="com.martinez.conia_app.Fragments.FormularioRegistro"
               android:label="fragment_formulario_registro" tools:layout="@layout/fragment_formulario_registro">
         <action android:id="@+id/action_formularioRegistro_to_loginFragment2" app:destination="@id/loginFragment2"/>
-        <action android:id="@+id/action_formularioRegistro_to_menu_home" app:destination="@id/menu_home"/>
+        <action
+                android:id="@+id/action_formularioRegistro_to_menu_home"
+                app:destination="@id/menu_home" />
     </fragment>
 </navigation>
