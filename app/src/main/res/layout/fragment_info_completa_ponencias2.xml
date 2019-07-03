@@ -4,22 +4,103 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
+              android:background="@color/lightGrey"
               tools:context=".Fragments.InfoCompletaPonencias">
-
-    <ImageView
-            android:layout_width="118dp"
-            android:layout_height="wrap_content"
-            tools:src="@tools:sample/avatars"
-            android:id="@+id/propio_ponente"/>
-    <TextView
+    <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:text="Estas son las presentaciones"
-            android:id="@+id/nuevo_tituloPonencia"/>
-    <TextView
-            android:text="ACÁ TODA LA INFO COMPLETA DE LA PONENCIA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/descripcionCompleta"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="6dp">
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                tools:src="@tools:sample/avatars"
+                android:scaleType="fitXY"
+                android:id="@+id/propio_ponente"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginBottom="2dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Titulo de Presentaciones"
+                    android:textSize="25sp"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:id="@+id/nuevo_tituloPonencia"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:weightSum="3">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+                    <TextView
+                            android:id="@+id/tv_inicioHora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_time_18dp"
+                            android:textColor="#C9C9C9"
+                            android:text="00"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:text=" - "/>
+                    <TextView
+                            android:id="@+id/tv_finalHora"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:text="00"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="1">
+                    <TextView
+                            android:id="@+id/tv_duracionPonencia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_timer_black_18dp"
+                            android:textColor="#C9C9C9"
+                            android:text="00"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#C9C9C9"
+                            android:text="min"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Headline"
+                    android:textSize="20sp"
+                    android:text="Descripcion:"/>
+            <TextView
+                    android:text="@string/desc_placeholder"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descripcionCompleta"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
