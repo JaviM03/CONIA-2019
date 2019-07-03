@@ -12,6 +12,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="10dp"
+            android:padding="5dp"
             android:layout_margin="10dp">
         <LinearLayout
                 android:layout_width="match_parent"
@@ -70,6 +71,15 @@
                     android:layout_weight="1"
                     android:numStars="5"
                     android:rating="3"/>
+            <Button
+                    android:id="@+id/btn_reservaR"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@drawable/reserva_bt_gradient"
+                    android:text="Reserva"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
