@@ -9,13 +9,18 @@
     <androidx.cardview.widget.CardView
             android:id="@+id/card_ponencias_inscritas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:layout_margin="10dp">
+            android:layout_height="220dp"
+            app:cardCornerRadius="100dp"
+            android:layout_margin="10dp"
+            app:cardElevation="6dp"
+
+
+        >
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+            android:background="#e0e0e0">
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -46,7 +51,9 @@
                             android:layout_margin="5dp"
                             android:text="TextView"
                             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            android:layout_weight="1"/>
+                            android:layout_weight="1"
+                        android:fontFamily="sans-serif-black"
+                        />
 
                     <TextView
                             android:id="@+id/tv_descripcion_ins"
@@ -54,7 +61,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
                             android:text="TextView"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                        android:fontFamily="sans-serif-thin"/>
 
                 </LinearLayout>
 
