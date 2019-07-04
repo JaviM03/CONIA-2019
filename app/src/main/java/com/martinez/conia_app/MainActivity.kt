@@ -1,6 +1,7 @@
 package com.martinez.conia_app
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -12,25 +13,20 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toolbar: ActionBar
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbar)
 
         //Creojsdakjd
+        Log.d("Entro al if", "creo un main actity")
+        //verifyUserLoggedIn()
         val navController = Navigation.findNavController(this, R.id.fragment)
         setUpBottomNavMenu(navController)
+        setUpActionBar(navController)
         Persistencia.database
     }
 
-    private fun setupBottomNavMenu(navController: NavController) {
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
-        bottomNav?.setupWithNavController(navController)
-
-        toolbar = supportActionBar!!
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottom_nav_view)
-    }
 
     private fun setUpBottomNavMenu(navController: NavController){
         bottom_nav_view?.let {
@@ -38,8 +34,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setUpActionBar(navController: NavController){
+        NavigationUI.setupActionBarWithNavController(this, navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(Navigation.findNavController(this, R.id.fragment), null)
+    }
 }
-
-
-
-

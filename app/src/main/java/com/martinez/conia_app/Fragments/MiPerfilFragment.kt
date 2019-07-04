@@ -57,7 +57,7 @@ class MiPerfilFragment : Fragment() {
 
                 listOfPonencias.clear()
                 dataSnapshot.
-                    children.mapNotNullTo(listOfPonencias) { it.getValue(Ponencia::class.java) }
+                        children.mapNotNullTo(listOfPonencias) { it.getValue(Ponencia::class.java) }
 
                 Log.d("hola", listOfPonencias.toString())
 

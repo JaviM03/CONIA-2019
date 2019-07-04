@@ -1,85 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical" android:id="@+id/linearContenedorFicha">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:id="@+id/linearContenedorFicha">
 
     <!-- Debo cambiar acá los id's de mis contenedores, y toda la paja, para luego
     poderlo unir sin problemas con retrofit y la api de firebase -->
     <androidx.cardview.widget.CardView
-            android:id="@+id/card"
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:padding="5dp"
+        android:layout_margin="10dp">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="10dp"
-            android:padding="5dp"
-            android:layout_margin="10dp">
-        <LinearLayout
+            android:orientation="vertical">
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="2">
+                    android:layout_weight="2">
                     <ImageView
-                            android:id="@+id/iv_ponente"
-                            android:layout_width="match_parent"
-                            android:layout_height="155dp"
-                            android:scaleType="fitXY"
-                            tools:srcCompat="@drawable/common_google_signin_btn_icon_dark"/>
+                        android:id="@+id/iv_ponente"
+                        android:layout_width="match_parent"
+                        android:layout_height="155dp"
+                        android:scaleType="fitXY"
+                        tools:srcCompat="@drawable/common_google_signin_btn_icon_dark"/>
                 </LinearLayout>
                 <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_nombreP"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:layout_weight="1"
-                        android:layout_margin="3dp">
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="TextView"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_weight="1"/>
 
                     <TextView
-                            android:id="@+id/tv_nombreP"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="5dp"
-                            android:text="TextView"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                            android:layout_weight="1"/>
-
-                    <TextView
-                            android:id="@+id/tv_descripcion"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:text="TextView"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                        android:id="@+id/tv_descripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:text="TextView"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <RatingBar
-                    android:id="@+id/ratingBar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_weight="1"
-                    android:numStars="5"
-                    android:rating="3"/>
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:numStars="5"
+                android:rating="3"/>
             <Button
-                    android:id="@+id/btn_reservaR"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:background="@drawable/reserva_bt_gradient"
-                    android:text="Reserva"/>
+                android:id="@+id/btn_reservaR"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:background="@drawable/reserva_bt_gradient"
+                android:text="Reserva"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
