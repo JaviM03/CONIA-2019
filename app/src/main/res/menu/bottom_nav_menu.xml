@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-            android:id="@+id/destination_home"
-            android:icon="@drawable/ic_home"
-            android:title="Inicio" />
+        android:id="@+id/destination_home"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
     <item
-            android:id="@+id/menu_ponencias"
-            android:icon="@drawable/ic_android"
-            android:title="Ponencias" />
+        android:id="@+id/destination_ponencias"
+        android:icon="@drawable/ic_android"
+        android:title="Ponencias" />
+    <item
+        android:id="@+id/destination_mi_perfil"
+        android:icon="@drawable/ic_android"
+        android:title="Mi perfil" />
 
 </menu>

@@ -25,7 +25,7 @@ class DetallePonenciaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         arguments?.let{
-            val safeArgs = DetallePonenciaFragment.fromBundle(it) //DetallePonenciaFragmentArgs.fromBundle(it)
+            val safeArgs = DetallePonenciaFragmentArgs.fromBundle(it)
             Log.d("report", safeArgs.ponencia.toString())
 
             activity?.let { it1 -> Glide.with(it1).load(safeArgs.ponencia.imagenURL).into(propio_ponente) }
