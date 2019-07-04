@@ -8,6 +8,27 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="destination_home">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_destination_home_to_loginFragment22">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="destination_mi_perfil">
                     <value>
                       <LayoutPositions>
@@ -19,7 +40,7 @@
                         </option>
                         <option name="myPositions">
                           <map>
-                            <entry key="nextAction">
+                            <entry key="next_action">
                               <value>
                                 <LayoutPositions />
                               </value>

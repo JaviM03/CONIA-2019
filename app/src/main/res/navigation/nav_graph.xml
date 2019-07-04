@@ -41,7 +41,7 @@
     <fragment android:id="@+id/detallePonenciaFragment2"
         android:name="com.martinez.conia_app.Fragments.DetallePonenciaFragment"
         android:label="Detalles" tools:layout="@layout/fragment_detalle_ponencia">
-        <argument android:name="ponencia" app:argType="com.example.conia_app.Entidad.Ponencia"/>
+        <argument android:name="ponencia" app:argType="com.martinez.conia_app.Entidad.Ponencia"/>
     </fragment>
     <fragment android:id="@+id/destination_mi_perfil" android:name="com.martinez.conia_app.Fragments.MiPerfilFragment"
         android:label="Mi Perfil" tools:layout="@layout/vista_perfil">
