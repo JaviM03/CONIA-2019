@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -16,7 +17,9 @@ import com.google.firebase.database.ValueEventListener
 import com.martinez.conia_app.Adapters.PonenciaCustomAdapter
 import com.martinez.conia_app.Entidad.Ponencia
 import com.martinez.conia_app.R
+import kotlinx.android.synthetic.main.vista_perfil.*
 import kotlinx.android.synthetic.main.vista_perfil.view.*
+import kotlinx.android.synthetic.main.vista_perfil.view.btn_cerrar_sesion
 
 class MiPerfilFragment : Fragment() {
 
@@ -30,6 +33,7 @@ class MiPerfilFragment : Fragment() {
         currentUid = FirebaseAuth.getInstance().currentUser?.uid.toString()
         getReservesByUser()
         bind(view)
+//        cerrarSesion()
         return view
     }
 
@@ -72,6 +76,12 @@ class MiPerfilFragment : Fragment() {
 
         ref.child("ponencias").addValueEventListener(ponenciasListener)
     }
-
-
+/* Intento de cierre de sesión malo T.T
+    private fun cerrarSesion(){
+        btn_cerrar_sesion.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            view?.findNavController()?.navigate(R.id.loginFragment2)
+        }
+    }
+*/
 }
