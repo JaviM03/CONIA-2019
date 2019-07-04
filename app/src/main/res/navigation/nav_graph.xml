@@ -13,21 +13,22 @@
     <fragment
             android:id="@+id/loginFragment2"
             android:name="com.martinez.conia_app.Fragments.LoginFragment"
-            android:label="fragment_login"
+            android:label="Inicio de sesión"
             tools:layout="@layout/fragment_login">
         <action
                 android:id="@+id/toMainFragment"
-                app:destination="@id/menu_home" />
+                app:destination="@+id/destination_home"/>
         <action android:id="@+id/action_loginFragment2_to_formularioRegistro" app:destination="@id/formularioRegistro"/>
     </fragment>
     <fragment
-            android:id="@+id/menu_home"
+            android:id="@+id/destination_home"
             android:name="com.martinez.conia_app.Fragments.MainFragment"
-            android:label="fragment_main"
+            android:label="Inicio"
             tools:layout="@layout/fragment_main">
         <action
                 android:id="@+id/toPonencia"
-                app:destination="@+id/menu_ponencias" />
+                app:destination="@+id/menu_ponencias"/>
+        <action android:id="@+id/action_destination_home_to_loginFragment22" app:destination="@id/loginFragment2"/>
     </fragment>
 
     <fragment android:id="@+id/infoCompletaPonencias"
@@ -40,6 +41,8 @@
         <action android:id="@+id/action_formularioRegistro_to_loginFragment2" app:destination="@id/loginFragment2"/>
         <action
                 android:id="@+id/action_formularioRegistro_to_menu_home"
-                app:destination="@id/menu_home" />
+                app:destination="@id/destination_home" />
     </fragment>
+    <fragment android:id="@+id/destination_mi_perfil" android:name="com.martinez.conia_app.Fragments.MiPerfilFragment"
+              android:label="Mi Perfil" tools:layout="@layout/vista_perfil"/>
 </navigation>
